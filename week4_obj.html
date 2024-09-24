@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체 생성</title>
+        <meta charset="utf-8">
+        <script>
+            function getStudentCounter() {return this.nStudent;}
+            function register() {
+                this.nStudent++;
+            }
+            function unregister(){
+                this.nStudent--;
+            }
+            let account=new Object();
+            account.korName="웹 프로그래밍";
+            account.nStudent=0;
+            account.getStudentCount=getStudentCounter;
+            account.register=register;
+            account.unregister=unregister;
+        </script>
+
+        <script>
+            let account2={
+                korName : "클라우드 컴퓨팅",
+                nStudent : 0,
+                getStudentCount : function() {return this.nStudent;},
+                register : function() {this.nStudent++;},
+                unregister : function() {this.nStudent--;}
+            };
+        </script>
+
+        <script>
+            function Account3(korName, nStudent){
+                this.korName=korName;
+                this.nStudent=nStudent;
+                this.getStudentCount=function(){return this.nStudent;}
+                this.register=function(){this.nStudent++;}
+                this.unregister=function(){this.nStudent--;}
+            }
+        </script>
+    </head>
+    <body>
+        <h3>1. 직접 객체 만들기</h3>
+        <script>
+        document.write("교과목 이름 = "+account.korName+"<br>");
+        document.write("등록 학생 수 = "+account.nStudent+"<br>");
+        account.register();
+        document.write("after register, 등록 학생 수 = "+account.getStudentCount()+"<br>");
+        </script>
+        <hr><h3>2. 리터럴 표기법</h3>
+        <script>
+            document.write("교과목 이름 = "+account2.korName+"<br>");
+            document.write("등록 학생 수 = "+account2.nStudent+"<br>");
+            account2.register();
+            document.write("after register, 등록 학생 수 = "+account2.getStudentCount()+"<br>");
+        </script>
+        <hr><h3>3. Prototype</h3>
+        <script>
+            let account3=new Account3("프로그래밍언어론", 0);
+
+            document.write("교과목 이름 = "+account3.korName+"<br>");
+            document.write("등록 학생 수 = "+account3.nStudent+"<br>");
+            account3.register();
+            document.write("after register, 등록 학생 수 = "+account3.getStudentCount()+"<br>");
+        </script>
+    </body>
+</html>
