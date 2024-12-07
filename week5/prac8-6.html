@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>연습문제 8-6</title>
+    </head>
+    <body>
+        <h2>innerHTML</h2>
+        <hr>
+        <p>이번 여름에는 어디로 갈까요?</p>
+    </body>
+    <script>
+        const p = document.querySelector('p');
+        p.addEventListener('click', function() {
+            go = prompt("HTML텍스트 혹은 그냥 텍스트를 입력하세요.");
+            p.innerHTML = go;
+        });
+        
+    </script>
+</html>
