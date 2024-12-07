@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var v0 = 'v0';
+        let I0 = 'I0';
+        console.log(v0, I0);
+
+        function fn1(){
+            v0 = 'fn1-v0';
+            I0 = 'fn1-I0';
+            console.log(v0, I0);
+        }
+        fn1();
+        console.log(v0, I0);
+
+        function fn2(){
+            var v0 = 'fn2-v0';
+            var I0 = 'fn2-I0';
+            console.log(v0, I0);
+        }
+        fn2();
+        console.log(v0, I0);
+
+        {
+            var v0 = 'block-v0';
+            let I0 = 'block-I0';
+            console.log(v0, I0);
+        }
+        console.log(v0, I0);
+    </script>
+</body>
+</html>
