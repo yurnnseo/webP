@@ -50,6 +50,7 @@
 14. week14
     - app.js (use 메서드로 HTML 응답 처리)
     - app3.js (미들웨어 체인에서 요청 객체 수정과 응답 처리)
-    - app8.js (body-parser와 serve-static을 사용한 정적 파일 제공 및 요청 데이터 처리)
+    - app8.js (body-parser와 serve-static을 사용)
+    - app10.js (라우터를 사용)
     - login.html (POST 요청으로 아이디와 비밀번호 전달 및 처리)
 15. week15 - 기말고사
